@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">TourismRecommendationApp</string>
+    <string name="app_name">Tourism Recommendation App</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="login">Login</string>
+
+    <string name="btn_link_to_register">Not registered yet. register now</string>
+    <string name="sign_up">SignUp</string>
+    <string name="btn_link_to_login">Already registered. login</string>
+    <string name="hint_full_name">Full name</string>
+    <string name="hint_phone">Phone</string>
+    <string name="select_your_interests">Select your interests</string>
+    <string name="recommended_for_you">Recommended</string>
+    <string name="categories">Categories</string>
+    <string name="see_all">see all</string>
+    <string name="all_places">All places</string>
 </resources>
