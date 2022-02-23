@@ -1,15 +1,15 @@
 package com.example.tourismrecommendationapp.model;
 
-public class place {
+public class Place {
     private int id;
-    private int tagName;
+    private String tagName;
     private String name;
     private String region;
     private String image;
     private double lat;
     private double lon;
 
-    public place(int id, int tagName, String name, String region, String image, double lat, double lon) {
+    public Place(int id, String tagName, String name, String region, String image, double lat, double lon) {
         this.id = id;
         this.tagName = tagName;
         this.name = name;
@@ -59,11 +59,11 @@ public class place {
         this.id = id;
     }
 
-    public int getTagName() {
+    public String getTagName() {
         return tagName;
     }
 
-    public void setTagName(int tagName) {
+    public void setTagName(String tagName) {
         this.tagName = tagName;
     }
 

@@ -6,7 +6,7 @@ public class Tag {
 
     private int id;
     private String name;
-
+    private String image;
     private int numOfTypes;
     private ArrayList<String> placeTypesList;
     private int selectedType;
@@ -14,9 +14,18 @@ public class Tag {
     public Tag(int id, String name) {
         this.id = id;
         this.name = name;
+        this.image = image;
     }
 
-    public Tag(int id, String name, int numOfTypes, ArrayList<String> types, int selectedType) {
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public Tag(int id, String name, int numOfTypes, ArrayList<String> types, int selectedType, String image) {
         this.id = id;
         this.name = name;
         this.numOfTypes = numOfTypes;

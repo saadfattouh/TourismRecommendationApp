@@ -3,6 +3,7 @@
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:background="@drawable/bg_input"
     android:layout_margin="8dp"
     android:layout_height="wrap_content">
 
@@ -12,8 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="8dp"
-        android:layout_margin="8dp"
-        android:background="@drawable/bg_input">
+        android:layout_margin="8dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/img"
@@ -50,8 +50,10 @@
         android:id="@+id/place_types_group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
+        android:visibility="gone"
         android:orientation="vertical">
+
 
 
     </RadioGroup>

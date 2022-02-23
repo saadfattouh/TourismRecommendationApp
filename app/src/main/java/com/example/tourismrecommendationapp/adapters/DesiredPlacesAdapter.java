@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -25,16 +26,20 @@ public class DesiredPlacesAdapter extends RecyclerView.Adapter<DesiredPlacesAdap
 
     Context context;
     private List<Tag> list;
-    private int marks;
-    private ArrayList<String> strengths;
-    private ArrayList<String> weaknesses;
+
+    private List<Tag> selectedTags;
 
     private int placesCounter = 0;
 
     // RecyclerView recyclerView;
     public DesiredPlacesAdapter(Context context, ArrayList<Tag> list) {
         this.context = context;
+        this.selectedTags = new ArrayList<Tag>();
         this.list = list;
+    }
+
+    public List<Tag> getSelectedTags() {
+        return selectedTags;
     }
 
     @NonNull
@@ -66,7 +71,21 @@ public class DesiredPlacesAdapter extends RecyclerView.Adapter<DesiredPlacesAdap
         holder.check.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    holder.placeTypesRG.setVisibility(View.VISIBLE);
+                    if(isChecked){
+                        holder.placeTypesRG.setVisibility(View.VISIBLE);
+                        if(placesCounter < 3){
+                            placesCounter++;
+                            selectedTags.add(tag);
+                        }else {
+                            Toast.makeText(context, "you can't choose more than 3 interests for better user experience", Toast.LENGTH_SHORT).show();
+                        }
+                    }else{
+                        if(selectedTags.contains(tag))
+                            selectedTags.remove(tag);
+                        placesCounter--;
+                        holder.placeTypesRG.setVisibility(View.GONE);
+                    }
+
                 }
             }
         );
@@ -99,17 +118,7 @@ public class DesiredPlacesAdapter extends RecyclerView.Adapter<DesiredPlacesAdap
 //
 //    }
 
-    public int getMarks() {
-        return marks;
-    }
 
-    public ArrayList<String> getStrengths() {
-        return strengths;
-    }
-
-    public ArrayList<String> getWeaknesses() {
-        return weaknesses;
-    }
 
     @Override
     public int getItemCount() {

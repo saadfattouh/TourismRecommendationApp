@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/root_layout_id"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    tools:context=".PlacesActivity">
+
+    <!-- implement the back button functionality-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            android:paddingTop="16dp"
+            android:paddingStart="16dp"
+            android:paddingBottom="16dp"/>
+    </FrameLayout>
+
+    <com.kekstudio.dachshundtablayout.DachshundTabLayout
+        android:id="@+id/categories_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabMode="scrollable"
+        app:ddAnimatedIndicator="dachshund"
+        app:ddIndicatorColor="@color/colorPrimary"
+        app:tabTextColor="@color/black"
+        app:tabRippleColor="@android:color/transparent"
+        />
+
+    <!--get the custom rounds from this url
+        https://github.com/captain-miao/OptionRoundCardview-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        android:paddingTop="10dp"
+        android:background="@drawable/bg_input_2"
+        >
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/tags_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never" />
+    </FrameLayout>
+
+
+
+
+
+</LinearLayout>

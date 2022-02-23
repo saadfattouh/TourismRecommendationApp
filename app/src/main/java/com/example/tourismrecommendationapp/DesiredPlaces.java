@@ -18,7 +18,6 @@ public class DesiredPlaces extends AppCompatActivity {
     RecyclerView mList;
     DesiredPlacesAdapter mAdapter;
 
-    int desiredPlacesCounter = 0;
     ArrayList<Tag> desiredTags;
 
     @Override
@@ -26,17 +25,23 @@ public class DesiredPlaces extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_interests);
 
-        ArrayList<String> types = new ArrayList<String>(){{
+        ArrayList<String> types = new ArrayList<String>()
+        {{
             add("italian restaurant");
             add("arabic restaurant");
             add("italian restaurant");
-
         }};
+
         mList = findViewById(R.id.rv);
-        tags = new ArrayList<Tag>(){{
-
-            add(new Tag(1, "mosques", new ArrayList<String>()));
+        tags = new ArrayList<Tag>()
+        {{
+            add(new Tag(1, "mosques", 3, types, 0, null));
+            add(new Tag(1, "mosques", 3, types, 0, null));
+            add(new Tag(1, "mosques", 3, types, 0, null));
+            add(new Tag(1, "mosques", 3, types, 0, null));
+            add(new Tag(1, "mosques", 3, types, 0, null));
         }};
+
         mAdapter = new DesiredPlacesAdapter(this, tags);
         mList.setAdapter(mAdapter);
     }

@@ -14,5 +14,15 @@
 
     <color name="secondary">#251451</color>
 
+    <color name="bg_main">#eff1f8</color>
+
+
+    <color name="bg_1">#0275d8</color>
+    <color name="bg_2">#d9534f</color>
+    <color name="bg_3">#f0ad4e</color>
+    <color name="bg_4">#5cb85c</color>
+
+
+
 
 </resources>
