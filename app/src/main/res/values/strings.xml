@@ -14,4 +14,7 @@
     <string name="categories">Categories</string>
     <string name="see_all">see all</string>
     <string name="all_places">All places</string>
+    <string name="hint_details">Details</string>
+    <string name="book">Book</string>
+    <string name="hint_reservation">Date Of Reservation</string>
 </resources>

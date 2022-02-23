@@ -33,6 +33,13 @@ public class Tag {
         this.selectedType = selectedType;
     }
 
+    public Tag(int id, String name, ArrayList<String> placeTypesList, int selectedType) {
+        this.id = id;
+        this.name = name;
+        this.placeTypesList = placeTypesList;
+        this.selectedType = selectedType;
+    }
+
     public int getId() {
         return id;
     }

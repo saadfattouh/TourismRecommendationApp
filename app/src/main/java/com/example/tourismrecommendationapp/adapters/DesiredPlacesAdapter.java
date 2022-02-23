@@ -46,7 +46,7 @@ public class DesiredPlacesAdapter extends RecyclerView.Adapter<DesiredPlacesAdap
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View listItem = layoutInflater.inflate(R.layout.item_interest, parent, false);
+        View listItem = layoutInflater.inflate(R.layout.item_question, parent, false);
 
         return new ViewHolder(listItem);
     }
@@ -59,8 +59,8 @@ public class DesiredPlacesAdapter extends RecyclerView.Adapter<DesiredPlacesAdap
 
         holder.name.setText(tag.getName());
 
-        holder.placeTypesRG.setVisibility(View.GONE);
         addPlaceTypes(holder.placeTypesRG, tag.getPlaceTypesList());
+        holder.placeTypesRG.setVisibility(View.GONE);
 
         holder.placeTypesRG.setOnCheckedChangeListener((group, checkedId) -> {
             RadioButton selected = group.findViewById(checkedId);
