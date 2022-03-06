@@ -1,6 +1,8 @@
 package com.example.tourismrecommendationapp.adapters;
 
 import android.content.Context;
+import android.content.Intent;
+import android.provider.SyncStateContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +16,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.tourismrecommendationapp.Constants;
+import com.example.tourismrecommendationapp.PlaceDetailsActivity;
 import com.example.tourismrecommendationapp.R;
 import com.example.tourismrecommendationapp.model.Place;
 
@@ -57,8 +61,16 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.ViewHolder
         if(place.getImage() != null){
             Glide.with(context)
                     .load(place.getImage())
-                    .into(holder.img);
+                      .into(holder.img);
         }
+        holder.itemView.setOnClickListener(v -> {
+            Intent i = new Intent(context, PlaceDetailsActivity.class);
+            i.putExtra(Constants.KEY_PLACE_NAME, place.getName());
+            i.putExtra(Constants.KEY_PLACE_TAG, place.getTagName());
+            i.putExtra(Constants.KEY_PLACE_RATING, place.getRating());
+            i.putExtra(Constants.KEY_PLACE_DETAILS, place.getRegion());
+            context.startActivity(i);
+        });
 
 
     }

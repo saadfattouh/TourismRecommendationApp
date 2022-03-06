@@ -1,6 +1,7 @@
 package com.example.tourismrecommendationapp.model;
 
 public class Place {
+
     private int id;
     private String tagName;
     private String name;
@@ -8,6 +9,7 @@ public class Place {
     private String image;
     private double lat;
     private double lon;
+    private double rating;
 
     public Place(int id, String tagName, String name, String region, String image, double lat, double lon) {
         this.id = id;
@@ -17,6 +19,17 @@ public class Place {
         this.image = image;
         this.lat = lat;
         this.lon = lon;
+    }
+
+    public Place(int id, String tagName, String name, String region, String image, double lat, double lon, double rating) {
+        this.id = id;
+        this.tagName = tagName;
+        this.name = name;
+        this.region = region;
+        this.image = image;
+        this.lat = lat;
+        this.lon = lon;
+        this.rating = rating;
     }
 
     public String getImage() {
@@ -73,5 +86,9 @@ public class Place {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public double getRating() {
+        return rating;
     }
 }

@@ -98,16 +98,12 @@ public class PlacesFragment extends Fragment {
 //            }
 //        });
 
-
-
-
         //now displaying  books based on the chosen category
 //        //progressBar
 //        //todo make a better way for loading visualisation
 //        final ProgressDialog progressDialog = new ProgressDialog(getContext());
 //        progressDialog.setMessage("Please Wait...");
 //        progressDialog.show();
-
 
         return view;
     }
@@ -121,9 +117,9 @@ public class PlacesFragment extends Fragment {
 
     private void getPlacesByTag(int tagId) {
         Places = new ArrayList<Place>(){{
-            add(new Place(1, "mousque", "alrahman mousque", "alqaseem", null, 0.44423, 0.3243));
-            add(new Place(1, "mousque", "alrahman mousque", "alqaseem", null, 0.44423, 0.3243));
-            add(new Place(1, "mousque", "alrahman mousque", "alqaseem", null, 0.44423, 0.3243));
+            add(new Place(1, "mousque", "alrahman mousque", "alqaseem", null, 0.44423, 0.3243, 2.5));
+            add(new Place(1, "mousque", "alrahman mousque", "alqaseem", null, 0.44423, 0.3243, 3.5));
+            add(new Place(1, "mousque", "alrahman mousque", "alqaseem", null, 0.44423, 0.3243, 3.4));
             add(new Place(1, "mousque", "alrahman mousque", "alqaseem", null, 0.44423, 0.3243));
             add(new Place(1, "mousque", "alrahman mousque", "alqaseem", null, 0.44423, 0.3243));
             add(new Place(1, "mousque", "alrahman mousque", "alqaseem", null, 0.44423, 0.3243));

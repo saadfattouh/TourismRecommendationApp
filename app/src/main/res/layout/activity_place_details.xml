@@ -39,18 +39,26 @@
 
     </androidx.cardview.widget.CardView>
 
+    <RatingBar
+        android:id="@+id/rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:saveEnabled="true"
+        android:numStars="5"
+        android:layout_below="@id/image_container"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
     <androidx.core.widget.NestedScrollView
         android:translationZ="10dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/order_btn"
-        android:layout_below="@id/image_container">
+        android:layout_above="@id/book_btn"
+        android:layout_below="@id/rating">
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
 
             <TextView
                 android:id="@+id/name"
@@ -138,6 +146,24 @@
                     />
             </LinearLayout>
 
+            <Button
+                android:id="@+id/rate_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="@string/rate_this_place"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:drawableEnd="@drawable/ic_star_half"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="false"
+
+                />
+
 
         </LinearLayout>
 
@@ -145,21 +171,22 @@
 
 
     <Button
+        android:id="@+id/book_btn"
         android:translationZ="90dp"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:id="@+id/order_btn"
+        android:layout_height="60dp"
         android:text="@string/book"
         android:layout_alignParentBottom="true"
         android:gravity="center"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:background="@color/bg"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="15dp"
         android:drawableEnd="@drawable/ic_book"
         android:layout_marginTop="20dp"
+        android:textAllCaps="false"
         />
 
 </RelativeLayout>

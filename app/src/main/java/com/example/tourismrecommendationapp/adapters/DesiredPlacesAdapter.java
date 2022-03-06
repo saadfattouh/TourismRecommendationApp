@@ -46,11 +46,10 @@ public class DesiredPlacesAdapter extends RecyclerView.Adapter<DesiredPlacesAdap
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View listItem = layoutInflater.inflate(R.layout.item_question, parent, false);
+        View listItem = layoutInflater.inflate(R.layout.item_interest, parent, false);
 
         return new ViewHolder(listItem);
     }
-
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
